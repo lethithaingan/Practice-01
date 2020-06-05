@@ -9,3 +9,12 @@ titanic <- titanic_train %>%
   mutate(Survived = factor(Survived),
          Pclass = factor(Pclass),
          Sex = factor(Sex))
+
+
+##ngan xynh dep
+##QQPLOT AGE DISTRIBUTION
+params <- titanic %>%
+  filter(!is.na(Age)) %>%
+  summarize(mean = mean(Age), sd = sd(Age)) 
+
+titanic %>% ggplot(aes(sample = Age)) + geom_qq(dparams = params) +    geom_abline()
