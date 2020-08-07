@@ -1,2 +1,2 @@
-# Practice-01
+# Google Play Store App
 My first GitHub repo
